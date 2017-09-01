@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="1.1 showMessageDialog显示一个带有OK 按钮的模态对话框。">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="John Doe">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="JOptionPane类提示框的一些常用的方法"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="TmacL"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>JOptionPane类提示框的一些常用的方法 - TmacL</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/blog/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/blog/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="https://tmacl.github.io/Home">
+                    Homepage
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/blog/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="https://tmacl.github.io/Home/public/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="https://tmacl.github.io/Home/public/say.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/blog/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/blog/2016/09/11/JOptionPane类提示框的一些常用的方法/">
+                JOptionPane类提示框的一些常用的方法
+            </a>
+        </h1>
+        <div class="post-info">
+            <span class="date">2016-09-11</span>
+            <a href="#disqus_thread" class="comments">Kommentare</a>
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h3 id="1-1-showMessageDialog"><a href="#1-1-showMessageDialog" class="headerlink" title="1.1 showMessageDialog"></a>1.1 showMessageDialog</h3><p>显示一个带有OK 按钮的模态对话框。<br><a id="more"></a><br>下面是几个使用showMessageDialog 的例子：<br>Java代码<br>JOptionPane.showMessageDialog(null, “友情提示”);<br> 效果如下：<br><img src="http://img.bbs.csdn.net/upload/201609/07/1473240599_805273.png" alt="mahua"><br>Java代码<br>JOptionPane.showMessageDialog(jPanel, “提示消息”, “标题”,JOptionPane.WARNING_MESSAGE);<br> 效果如下：<br><img src="http://img.bbs.csdn.net/upload/201609/07/1473240606_210946.jpg" alt="mahua"><br>Java代码<br>JOptionPane.showMessageDialog(null, “提示消息.”, “标题”,JOptionPane.ERROR_MESSAGE);<br><img src="http://img.bbs.csdn.net/upload/201609/07/1473240616_554623.png" alt="mahua"><br>Java代码<br>JOptionPane.showMessageDialog(null, “提示消息.”, “标题”,JOptionPane.PLAIN_MESSAGE);<br><img src="http://img.bbs.csdn.net/upload/201609/07/1473240625_43133.png" alt="mahua"></p>
+<h3 id="1-2-showOptionDialog"><a href="#1-2-showOptionDialog" class="headerlink" title="1.2 showOptionDialog"></a>1.2 showOptionDialog</h3><p>这个函数可以改变显示在按钮上的文字。你还可以执行更多的个性化操作。<br>常规的消息框：<br>Java代码<br>int n = JOptionPane.showConfirmDialog(null, “你高兴吗?”, “标题”,JOptionPane.YES_NO_OPTION);<br> 效果如下：<br><img src="http://img.bbs.csdn.net/upload/201609/07/1473240677_770550.png" alt="mahua"><br>个性话消息框：<br>Java代码<br>Object[] options ={ “好啊！”, “去一边！” };<br>int m = JOptionPane.showOptionDialog(null, “我可以约你吗？”, “标题”,JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);<br> 效果如下：<br><img src="http://img.bbs.csdn.net/upload/201609/07/1473240691_356858.png" alt="mahua"></p>
+<h3 id="1-3-showInoutDialog"><a href="#1-3-showInoutDialog" class="headerlink" title="1.3 showInoutDialog"></a>1.3 showInoutDialog</h3><p>该方法返回一个Object 类型。这个Object 类型一般是一个String 类型，反应了用户的输入。<br>下拉列表形式的例子：<br>Java代码<br>Object[] obj2 ={ “足球”, “篮球”, “乒乓球” };<br>String s = (String) JOptionPane.showInputDialog(null,”请选择你的爱好:\n”, “爱好”, JOptionPane.PLAIN_MESSAGE, new ImageIcon(“icon.png”), obj2, “足球”);<br> 效果如下：<br><img src="http://img.bbs.csdn.net/upload/201609/07/1473240742_728617.jpg" alt="mahua"><br>  文本框形式的例子：<br>Java代码<br>JOptionPane.showInputDialog(null,”请输入你的爱好：\n”,”title”,JOptionPane.PLAIN_MESSAGE,icon,null,”在这输入”);<br> 效果如下：<br><img src="http://img.bbs.csdn.net/upload/201609/07/1473240753_950282.jpg" alt="mahua"></p>
+<h3 id="对应的小图标可参照下图："><a href="#对应的小图标可参照下图：" class="headerlink" title="对应的小图标可参照下图："></a>对应的小图标可参照下图：</h3><p><img src="http://img.bbs.csdn.net/upload/201609/07/1473240778_954087.jpg" alt="mahua"></p>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/blog/tags/Java/">#Java</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+    <div class="comments">
+        
+
+
+    </div>
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    This theme was developed by <a href="https://github.com/TmacL">TmacL</a>. The source code is available on Github. Create Websites. Make Magic.
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/blog/2016/09/22/给人启迪的30条编程名言/">给人启迪的30条编程名言</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/blog/2016/09/17/android-layout-gravity和android-gravity的区别/">android:layout_gravity和an</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/blog/2016/09/11/JOptionPane类提示框的一些常用的方法/">JOptionPane类提示框的一些常用的方法</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/blog/2016/09/09/hello-world/">Hello World</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/TmacL">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/?lang=en">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://dribbble.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-dribbble"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://plus.google.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-google-plus"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.behance.net/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-behance"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://500px.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-500px"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:\#test@example.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @Untitled. All right reserved | Design & Hexo <a href="https://tmacl.github.io/Home/public/say.html">TmacL</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/blog/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

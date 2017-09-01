@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="1.首先来看看Android:layout_gravity和android:gravity的使用区别。">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="John Doe">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="android:layout_gravity和android:gravity的区别"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="TmacL"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>android:layout_gravity和android:gravity的区别 - TmacL</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/blog/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/blog/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="https://tmacl.github.io/Home">
+                    Homepage
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/blog/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="https://tmacl.github.io/Home/public/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="https://tmacl.github.io/Home/public/say.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/blog/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/blog/2016/09/17/android-layout-gravity和android-gravity的区别/">
+                android:layout_gravity和android:gravity的区别
+            </a>
+        </h1>
+        <div class="post-info">
+            <span class="date">2016-09-17</span>
+            <a href="#disqus_thread" class="comments">Kommentare</a>
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h3 id="1-首先来看看Android-layout-gravity和android-gravity的使用区别。"><a href="#1-首先来看看Android-layout-gravity和android-gravity的使用区别。" class="headerlink" title="1.首先来看看Android:layout_gravity和android:gravity的使用区别。"></a>1.首先来看看Android:layout_gravity和android:gravity的使用区别。<a id="more"></a></h3><h4 id="android-gravity："><a href="#android-gravity：" class="headerlink" title="android:gravity："></a>android:gravity：</h4><p>这个是针对控件里的元素来说的，用来控制元素在该控件里的显示位置。例如，在一个Button按钮控件中设置如下两个属性，<br>android:gravity=”left”和android:text=”提交”，这时Button上的文字“提交”将会位于Button的左部。</p>
+<h4 id="android-layout-gravity："><a href="#android-layout-gravity：" class="headerlink" title="android:layout_gravity："></a>android:layout_gravity：</h4><p>这个是针对控件本身而言，用来控制该控件在包含该控件的父控件中的位置。同样，当我们在Button按钮控件中设置android:layout_gravity=”left”属性时，表示该Button按钮将位于界面的左部。</p>
+<h3 id="2-属性值："><a href="#2-属性值：" class="headerlink" title="2.属性值："></a>2.属性值：</h3><p>这两个属性可选的值有：top、bottom、left、right、center_vertical、fill_vertical、center_horizontal、fill_horizontal、center、fill、clip_vertical。<br>一个属性可以包含多个值，需用“|”分开。其含义如下：</p>
+<ul>
+<li>top            将对象放在其容器的顶部，不改变其大小.</li>
+<li>bottom         将对象放在其容器的底部，不改变其大小.</li>
+<li>left             将对象放在其容器的左侧，不改变其大小.</li>
+<li>right             将对象放在其容器的右侧，不改变其大小.</li>
+<li>center_vertical    将对象纵向居中，不改变其大小. 垂直对齐方式：垂直方向上居中对齐。</li>
+<li>fill_vertical    必要的时候增加对象的纵向大小，以完全充满其容器. 垂直方向填充</li>
+<li>center_horizontal    将对象横向居中，不改变其大小. 水平对齐方式：水平方向上居中对齐</li>
+<li>fill_horizontal    必要的时候增加对象的横向大小，以完全充满其容器. 水平方向填充</li>
+<li>center    将对象横纵居中，不改变其大小.</li>
+<li>fill    必要的时候增加对象的横纵向大小，以完全充满其容器.</li>
+<li>clip_vertical    附加选项，用于按照容器的边来剪切对象的顶部和/或底部的内容. 剪切基于其纵向对齐设置：顶部对齐时，剪切底部；底部对齐时剪切顶部；除此之外剪切顶部和底部.垂直方向裁剪</li>
+<li>clip_horizontal    附加选项，用于按照容器的边来剪切对象的左侧和/或右侧的内容. 剪切基于其横向对齐设置：左侧对齐时，剪切右侧；右侧对齐时剪切左侧；除此之外剪切左侧和右侧.水平方向裁剪</li>
+</ul>
+<h4 id="我们主要来看看center-vertical和center-horizontal两个属性值，center-vertical是指将对象在垂直方向上居中对齐，即在从上到下的方向上选择中间的位置放好；center-horizontal是指将对象水平方向上居中对齐，即在从左到右的方向上选择中间的位置放好。"><a href="#我们主要来看看center-vertical和center-horizontal两个属性值，center-vertical是指将对象在垂直方向上居中对齐，即在从上到下的方向上选择中间的位置放好；center-horizontal是指将对象水平方向上居中对齐，即在从左到右的方向上选择中间的位置放好。" class="headerlink" title="我们主要来看看center_vertical和center_horizontal两个属性值，center_vertical是指将对象在垂直方向上居中对齐，即在从上到下的方向上选择中间的位置放好；center_horizontal是指将对象水平方向上居中对齐，即在从左到右的方向上选择中间的位置放好。"></a>我们主要来看看center_vertical和center_horizontal两个属性值，center_vertical是指将对象在垂直方向上居中对齐，即在从上到下的方向上选择中间的位置放好；center_horizontal是指将对象水平方向上居中对齐，即在从左到右的方向上选择中间的位置放好。</h4><h3 id="3-特殊情况"><a href="#3-特殊情况" class="headerlink" title="3.特殊情况"></a>3.特殊情况</h3><h4 id="当我们采用LinearLayout布局时，有以下特殊情况需要我们注意："><a href="#当我们采用LinearLayout布局时，有以下特殊情况需要我们注意：" class="headerlink" title="当我们采用LinearLayout布局时，有以下特殊情况需要我们注意："></a>当我们采用LinearLayout布局时，有以下特殊情况需要我们注意：</h4><ul>
+<li>(1)当 android:orientation=”vertical”  时， android:layout_gravity只有水平方向的设置才起作用，垂直方向的设置不起作用。即：left，right，center_horizontal 是生效的。</li>
+<li>(2)当 android:orientation=”horizontal” 时， android:layout_gravity只有垂直方向的设置才起作用，水平方向的设置不起作用。即：top，bottom，center_vertical 是生效的。</li>
+</ul>
+<p>下面以一个例子说明：<br><img src="http://img.bbs.csdn.net/upload/201609/17/1474103532_450676.png" alt="mahua"><br>其效果图如下：<br><img src="http://hi.csdn.net/attachment/201108/25/0_1314261578HHPx.gif" alt="mahua"></p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>   TextView并没有按照我们设置的android:layout_gravity属性那样显示在界面的下方正中央，Button也没有显示在界面的左下方。<br>   这是因为我们设置了LinearLayout的android:orientation属性为”vertical”。对于LinearLayout如果设置android:orientation=”vertical”，<br>   那么android:layout_gravity的设置只在水平方向生效，如上图TextView显示在屏幕的水平正中央，而Button显示在水平方向的最左边；<br>   如果设置android:orientation=”horizontal”，那么android:layout_gravity属性只在垂直方向生效</p>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/blog/tags/Android/">#Android</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+    <div class="comments">
+        
+
+
+    </div>
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    This theme was developed by <a href="https://github.com/TmacL">TmacL</a>. The source code is available on Github. Create Websites. Make Magic.
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/blog/2016/09/22/给人启迪的30条编程名言/">给人启迪的30条编程名言</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/blog/2016/09/17/android-layout-gravity和android-gravity的区别/">android:layout_gravity和an</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/blog/2016/09/11/JOptionPane类提示框的一些常用的方法/">JOptionPane类提示框的一些常用的方法</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/blog/2016/09/09/hello-world/">Hello World</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/TmacL">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/?lang=en">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://dribbble.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-dribbble"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://plus.google.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-google-plus"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.behance.net/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-behance"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://500px.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-500px"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:\#test@example.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @Untitled. All right reserved | Design & Hexo <a href="https://tmacl.github.io/Home/public/say.html">TmacL</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/blog/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
